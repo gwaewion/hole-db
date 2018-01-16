@@ -20,6 +20,7 @@ then
 	mysqld --user=mysql --datadir="${DB_DATA_PATH}"
 else
 	echo "=> Starting DB"
+	chown -R mysql:mysql /data
 	mysqld --user=mysql --datadir="${DB_DATA_PATH}"
 fi
 
